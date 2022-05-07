@@ -1,5 +1,6 @@
-# que-regarder-sur-netflix
+# Que Regarder Sur Netflix ?
 <br />
+![image](https://i.imgur.com/BFQeFvT.png "Website mockup")
 
 <i>Que regarder sur Netflix, ou QRSN pour les intimes est un site Internet permettant à ses utilisateurs d'obtenir des recommandations sur quoi regarder sur Netflix selon leurs goûts.</i>
 
