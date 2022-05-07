@@ -33,7 +33,11 @@ QRSN permet à ses utilisateurs de voter pour leurs films préférés, créant a
 ✅ Création du script de déconnexion
 
 
+
 ❌ Création du script de vote
+
 ❌ Création du script d'inscription
+
 ❌ Création du script de modification du profil de l'utilisateur
+
 ❌ Création du script d'ajout/modification de données de la base de données
