@@ -5,8 +5,10 @@ import { HomeComponent } from './home/home.component';
 import { LoginPageComponent } from './login-page/login-page.component';
 import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
 import { ProfilComponent } from './profil/profil.component';
+import { RegisterComponent } from './register/register.component';
 import { SeriesallComponent } from './seriesall/seriesall.component';
 import { SingleMovieComponent } from './singlemovie/singlemovie.component';
+
 
 const routes: Routes = [
   { path: '', component: HomeComponent},
@@ -16,6 +18,7 @@ const routes: Routes = [
   { path : 'movies/:id', component: SingleMovieComponent},
   { path : 'login', component: LoginPageComponent},
   { path : 'profil/:username', component: ProfilComponent},
+  { path : 'register', component: RegisterComponent},
 
   { path: '**', pathMatch: 'full', 
         component: PagenotfoundComponent }

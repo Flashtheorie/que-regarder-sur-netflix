@@ -13,6 +13,7 @@ import { SeriesallComponent } from './seriesall/seriesall.component';
 import { LoginPageComponent } from './login-page/login-page.component';
 import { NavbarConnectedComponent } from './navbar-connected/navbar-connected.component';
 import { ProfilComponent } from './profil/profil.component';
+import { RegisterComponent } from './register/register.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { ProfilComponent } from './profil/profil.component';
     SeriesallComponent,
     LoginPageComponent,
     NavbarConnectedComponent,
-    ProfilComponent
+    ProfilComponent,
+    RegisterComponent
   ],
   imports: [
     BrowserModule,
