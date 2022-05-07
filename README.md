@@ -2,12 +2,18 @@
 <br />
 ![image](https://i.imgur.com/BFQeFvT.png)
 
+
 <i>Que regarder sur Netflix, ou QRSN pour les intimes est un site Internet permettant à ses utilisateurs d'obtenir des recommandations sur quoi regarder sur Netflix selon leurs goûts.</i>
 
 Comme vous le savez surement, Netflix est connu pour être une Jungle ou se repérer est difficile et trouver de bons films l'est tout autant.
 
 <br>
 QRSN permet à ses utilisateurs de voter pour leurs films préférés, créant ainsi un classement selon le genre et la catégorie que les autres utilisateurs pourront visiter.
+
+## Technologies utilisées :
+- Angular
+- NodeJS
+- TailwindCSS
 
 ## ROADMAP :
 
