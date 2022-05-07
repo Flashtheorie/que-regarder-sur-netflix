@@ -6,7 +6,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./pagenotfound.component.css']
 })
 export class PagenotfoundComponent implements OnInit {
-
+  getSessionInfos(){
+    return sessionStorage.getItem('name');
+  }
+  logout() {
+    sessionStorage.clear();
+  }
   constructor() { }
 
   ngOnInit(): void {

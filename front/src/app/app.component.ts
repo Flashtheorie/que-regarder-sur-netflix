@@ -7,4 +7,11 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'front';
+
+  saveSession(){
+    sessionStorage.setItem('name', 'Antoine');
+  }
+  getSessionInfos(){
+    return sessionStorage.getItem('name');
+  }
 }

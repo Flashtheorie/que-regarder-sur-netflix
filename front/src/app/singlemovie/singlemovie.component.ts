@@ -8,6 +8,13 @@ import { Router,NavigationEnd  } from '@angular/router';
   styleUrls: ['./singlemovie.component.css']
 })
 export class SingleMovieComponent {
+  getSessionInfos(){
+    return sessionStorage.getItem('name');
+  }
+  logout() {
+    sessionStorage.clear();
+  }
+  
   title = 'apprenants';
   currentRoute: string | undefined;
   data: any | undefined = [];

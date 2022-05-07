@@ -7,7 +7,12 @@ import { HttpClient } from '@angular/common/http';
 })
 export class AllComponent {
   title = 'apprenants';
-
+  getSessionInfos(){
+    return sessionStorage.getItem('name');
+  }
+  logout() {
+    sessionStorage.clear();
+  }
   data: any | undefined = [];
   router: any;
   constructor(private http: HttpClient) {

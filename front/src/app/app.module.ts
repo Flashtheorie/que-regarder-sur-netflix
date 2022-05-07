@@ -10,6 +10,8 @@ import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
 import { SingleMovieComponent } from './singlemovie/singlemovie.component';
 import { SearchbarComponent } from './searchbar/searchbar.component';
 import { SeriesallComponent } from './seriesall/seriesall.component';
+import { LoginPageComponent } from './login-page/login-page.component';
+import { NavbarConnectedComponent } from './navbar-connected/navbar-connected.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +22,9 @@ import { SeriesallComponent } from './seriesall/seriesall.component';
     PagenotfoundComponent,
     SingleMovieComponent,
     SearchbarComponent,
-    SeriesallComponent
+    SeriesallComponent,
+    LoginPageComponent,
+    NavbarConnectedComponent
   ],
   imports: [
     BrowserModule,

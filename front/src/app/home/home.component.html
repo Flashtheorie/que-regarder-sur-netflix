@@ -1,4 +1,5 @@
-<app-navbar></app-navbar>
+<app-navbar *ngIf="getSessionInfos() == null"></app-navbar>
+<app-navbar-connected *ngIf="getSessionInfos() != null"></app-navbar-connected>
 
 <div class="container mx-auto px-4 pt-4 mb-5" align="center">
   <img src="../assets/boy.PNG" alt="" class="w-full sm:w-1/4">

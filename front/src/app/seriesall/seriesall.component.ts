@@ -9,7 +9,12 @@ import { Component, OnInit } from '@angular/core';
 export class SeriesallComponent {
 
   title = 'apprenants';
-
+  getSessionInfos(){
+    return sessionStorage.getItem('name');
+  }
+  logout() {
+    sessionStorage.clear();
+  }
   data: any | undefined = [];
   router: any;
   constructor(private http: HttpClient) {
