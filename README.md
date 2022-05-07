@@ -11,16 +11,27 @@ QRSN permet à ses utilisateurs de voter pour leurs films préférés, créant a
 ## ROADMAP :
 
 ✅ Création de la page d'accueil
+
 ✅ Création de la page de connexion
+
 ✅ Création de la page d'inscription
+
 ✅ Création de la page des films les plus votés
+
 ✅ Création de la page des séries les plus votés
+
 ✅ Création de la page "Plus de détails sur ce film"
+
 ✅ Création de la page "Plus de détails sur cette série"
+
 ✅ Création de la page de profil
 
+
+
 ✅ Création du script de connexion
+
 ✅ Création du script de déconnexion
+
 
 ❌ Création du script de vote
 ❌ Création du script d'inscription
