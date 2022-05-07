@@ -12,7 +12,7 @@ export class NavbarComponent{
   toggleNavbar(){
     this.showMenu = !this.showMenu;
   } 
-  
+   
   toggleDarkMode() {
     document.documentElement.classList.toggle('dark')
     localStorage['theme'] = document.documentElement.classList.contains('dark') ? 'dark' : 'light'
