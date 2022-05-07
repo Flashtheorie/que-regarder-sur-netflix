@@ -1,0 +1,9 @@
+db.movies.insertOne({ 
+    title: "Breaking Bad",
+    genre: "Séries policières, Thrillers TV, Séries US",
+    synopsis: "Un professeur de chimie atteint d'un cancer s'associe à un ancien élève pour fabriquer et vendre de la méthamphétamine afin d'assurer l'avenir financier de sa famille.",
+     avatar: "https://fr.web.img2.acsta.net/pictures/18/07/23/11/26/3445791.jpg",
+     datedesortie: 2013,
+      nbVotes: 0,
+       link: "https://www.netflix.com/title/70143836",
+        type: "Série" })

@@ -1,0 +1,106 @@
+<app-navbar></app-navbar>
+
+<div class="container mx-auto px-4 pt-4 mb-5">
+    <h2 class="uppercase tracking-wider text-red-800 text-lg font-semibold"><nav class="flex" aria-label="Breadcrumb">
+        <ol role="list" class="flex items-center space-x-4">
+          <li>
+            <div>
+              <a routerLink="/home" class="text-gray-400 hover:text-gray-500">
+                <!-- Heroicon name: solid/home -->
+                <svg class="flex-shrink-0 h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                  <path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z" />
+                </svg>
+                <span class="sr-only">Home</span>
+              </a>
+            </div>
+          </li>
+      
+          <li>
+            <div class="flex items-center" *ngIf="data[0].type == 'Film'; else ItsASerieBreadcrumb">
+              <!-- Heroicon name: solid/chevron-right -->
+              <svg class="flex-shrink-0 h-5 w-5 text-gray-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd" />
+              </svg>
+              <a routerLink="/top/movies/all" class="ml-4 text-sm font-medium text-gray-500 hover:text-gray-700">Films</a>
+            </div>
+            <ng-template #ItsASerieBreadcrumb>
+              <div class="flex items-center">
+                <!-- Heroicon name: solid/chevron-right -->
+                <svg class="flex-shrink-0 h-5 w-5 text-gray-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                  <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd" />
+                </svg>
+                <a routerLink="/top/series/all" class="ml-4 text-sm font-medium text-gray-500 hover:text-gray-700">Séries</a>
+              </div>
+            </ng-template>
+          
+          </li>
+          <li>
+            <div class="flex items-center">
+              <!-- Heroicon name: solid/chevron-right -->
+              <svg class="flex-shrink-0 h-5 w-5 text-gray-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd" />
+              </svg>
+              <a href="#" class="ml-4 text-sm font-medium text-gray-500 hover:text-gray-700">{{ data[0].genre }}</a>
+            </div>
+          </li>
+          <li>
+              
+            <div class="flex items-center">
+              <!-- Heroicon name: solid/chevron-right -->
+              <svg class="flex-shrink-0 h-5 w-5 text-gray-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd" />
+              </svg>
+              <a href="#" class="ml-4 text-sm font-medium text-gray-500 hover:text-gray-700" aria-current="page">{{data[0].title }}</a>
+            </div>
+          </li>
+        </ol>
+      </nav></h2>
+
+      </div>
+
+<div class="movie-info mb-10 ">
+    <!-- bg-white dark:bg-slate-600 -->
+    <div class="rounded-lg container mx-auto px-4 py-16 flex flex-col md:flex-row">
+        
+        <img src="{{ data[0].avatar }}" class="w-64 md:w-96 rounded-lg" style="width: 24rem;">
+        <div class="md:ml-24">
+            <h2 class="text-4xl font-semibold dark:text-gray-400">{{ data[0].title }} ({{ data[0].datedesortie }})</h2>
+            <div class="flex flex-wrap items-center text-red-400">
+                <span class="ml-1 text-yellow-900 dark:text-yellow-500 text-sm"><i class="fa-solid fa-star "></i> {{ data[0].nbVotes }}</span>
+                <span class="mx-2">|</span>
+                <span>{{ data[0].datedesortie }}</span>
+                <span class="mx-2">|</span>
+                <span class="bg-blue-100 text-blue-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded dark:bg-blue-200 dark:text-blue-800">{{ data[0].genre}}</span>
+            </div>
+            <p class="text-gray-600 mt-8 dark:text-gray-400">
+                {{ data[0].synopsis }}
+            </p>
+
+            <div class="mt-12 flex flex-row gap-4">
+                <button class="flex items-center bg-yellow-500  text-white rounded font-semibold px-5 py-4 hover:bg-yellow-600 transition ease-in-out duration-600">
+                    <a href="{{ data[0].link }}" target="_blank">
+                        <i class="fa-solid fa-star"></i> Ajouter aux favoris
+                    </a>
+                </button>
+                <button *ngIf="data[0].type == 'Film'; else ItsASerie" class="flex items-center bg-red-500 text-white rounded font-semibold px-5 py-4 hover:bg-red-600 transition ease-in-out duration-600">
+                    <a href="{{ data[0].link }}" target="_blank" >
+                        <i class="fa-solid fa-eye"></i> Voir le film sur Netflix
+                        
+                    </a>
+                    
+                </button>
+                <ng-template #ItsASerie>
+                  <button  class="flex items-center bg-red-500 text-white rounded font-semibold px-5 py-4 hover:bg-red-600 transition ease-in-out duration-600">
+                    <a href="{{ data[0].link }}" target="_blank" >
+                        <i class="fa-solid fa-eye"></i> Voir la série sur Netflix
+                        
+                    </a>
+                    
+                </button>
+                    
+                
+                </ng-template>
+            </div>
+        </div>
+    </div>
+</div>
