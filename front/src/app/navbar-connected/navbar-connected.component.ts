@@ -1,3 +1,4 @@
+import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -26,5 +27,13 @@ export class NavbarConnectedComponent {
   clickEvent(){
       this.status = !this.status;       
   }  
-  
+  data: any | undefined = [];
+  constructor(private http: HttpClient) {
+    //console.log(router.url);
+
+    this.http.get('http://localhost:3001/connect/' + sessionStorage.getItem('name') + '/' + sessionStorage.getItem('password')).subscribe(data => {
+    this.data.push(data);
+    console.log(this.data);
+    }, error => console.error(error));
+  }
 }

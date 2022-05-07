@@ -40,9 +40,8 @@
           <i (click)="clickEvent()"  
     [ngClass]="status ? 'fa-sun-bright' : 'fa-moon'"    class="fa-solid fa-2xl dark:text-yellow-500"></i>
         </a>
-        <a   class="cursor-pointer px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug text-white hover:opacity-75" routerLink="/profil/{{ getSessionInfos()}}">
-          {{ getSessionInfos()}}
-        </a>
+        <img src="{{ data[0].avatar}}" alt="" class="h-8 w-8 rounded-full cursor-pointer" routerLink="/profil/{{ getSessionInfos()}}">
+        
         <a (click)="logout()"  class="cursor-pointer px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug text-white hover:opacity-75" routerLink="/home">
             <i class="fa-duotone fa-door-open fa-2xl"></i>
           </a>
@@ -50,8 +49,6 @@
       </div>
     </div>
   </nav>
-  <script>
-    
-  </script>
+
 
 
