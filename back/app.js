@@ -51,6 +51,12 @@ app.get('/movies/:id', function(req, res){
     })
 })
 
+app.get('/connect/:username/:password', function(req, res){
+    db.collection('users').findOne({username: req.params.username, password: req.params.password}, function(err, data){
+        res.json(data)
+    })
+})
+
 
 
 

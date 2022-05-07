@@ -19,12 +19,12 @@
             <div class="w-full mb-2">
                 
                     <i class='ml-3 fill-current text-gray-400 text-xs z-10 fas fa-lock'></i>
-                    <input type='text' placeholder="Mot de passe"
-                        class="-mx-6 px-8 w-full border rounded px-3 py-2 text-gray-700 focus:outline-none" />
+                    <input type='password' placeholder="Mot de passe"
+                        class="-mx-6 px-8 w-full border rounded px-3 py-2 text-gray-700 focus:outline-none" #password>
                 
             </div>
             <a routerLink="/register" class="cursor-pointer text-xs text-gray-500 float-right mb-4">Tu n'as pas de compte ?</a>
-            <button (click)="saveSession(username.value)" routerLink="/home" class="w-full py-2 rounded-full bg-green-600 text-gray-100  focus:outline-none">Test session</button>
+            <button (click)="connect(username.value, password.value)" class="btn btn-" routerLink="/home" class="w-full py-2 rounded-full bg-green-600 text-gray-100  focus:outline-none">Test session</button>
             <!--  <button type="submit"
                 class="w-full py-2 rounded-full bg-green-600 text-gray-100  focus:outline-none">Connexion</button>-->
    </div> </form>

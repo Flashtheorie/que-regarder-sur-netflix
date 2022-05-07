@@ -12,6 +12,7 @@ import { SearchbarComponent } from './searchbar/searchbar.component';
 import { SeriesallComponent } from './seriesall/seriesall.component';
 import { LoginPageComponent } from './login-page/login-page.component';
 import { NavbarConnectedComponent } from './navbar-connected/navbar-connected.component';
+import { ProfilComponent } from './profil/profil.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { NavbarConnectedComponent } from './navbar-connected/navbar-connected.co
     SearchbarComponent,
     SeriesallComponent,
     LoginPageComponent,
-    NavbarConnectedComponent
+    NavbarConnectedComponent,
+    ProfilComponent
   ],
   imports: [
     BrowserModule,
