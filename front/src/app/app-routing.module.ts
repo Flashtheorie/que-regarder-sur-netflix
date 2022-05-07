@@ -4,6 +4,7 @@ import { AllComponent } from './all/all.component';
 import { HomeComponent } from './home/home.component';
 import { LoginPageComponent } from './login-page/login-page.component';
 import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
+import { ProfilComponent } from './profil/profil.component';
 import { SeriesallComponent } from './seriesall/seriesall.component';
 import { SingleMovieComponent } from './singlemovie/singlemovie.component';
 
@@ -14,6 +15,7 @@ const routes: Routes = [
   { path: 'top/series/all', component: SeriesallComponent},
   { path : 'movies/:id', component: SingleMovieComponent},
   { path : 'login', component: LoginPageComponent},
+  { path : 'profil/:username', component: ProfilComponent},
 
   { path: '**', pathMatch: 'full', 
         component: PagenotfoundComponent }

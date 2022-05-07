@@ -7,8 +7,9 @@ import { HttpClient } from '@angular/common/http';
 })
 export class LoginPageComponent implements OnInit {
   data: any | undefined = [];
-  saveSession(username:string){
+  saveSession(username:string, password:string){
     sessionStorage.setItem('name', username);
+    sessionStorage.setItem('password', password);
   }
   getSessionInfos(){
     return sessionStorage.getItem('name');
@@ -20,7 +21,8 @@ export class LoginPageComponent implements OnInit {
     console.log(this.data);
     if (this.data != ''){
       sessionStorage.setItem('name', username);
-      window.location.href = '/profil/' + username;
+      sessionStorage.setItem('password', password);
+      //window.location.href = '/profil/' + username;
     }
     else{
       console.log('Incorrect username or password')

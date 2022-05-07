@@ -1,6 +1,6 @@
 <app-navbar *ngIf="getSessionInfos() == null"></app-navbar>
 <app-navbar-connected *ngIf="getSessionInfos() != null"></app-navbar-connected>
-<div class="container mx-auto px-4 pt-16">
+<div class="container mx-auto px-4 pt-16" *ngIf="getSessionInfos() != null">
     <h2 class="uppercase tracking-wider text-red-800 text-lg font-semibold"><nav class="flex" aria-label="Breadcrumb">
         <ol role="list" class="flex items-center space-x-4">
           <li>
@@ -62,5 +62,11 @@
     </div>
     
 </div>
+</div>
 
+
+<!-- If not logged in -->
+<div class="grid place-items-center mt-20" *ngIf="getSessionInfos() == null">
+  Vous devez être connecté pour voir ce contenu.
+</div>
 
