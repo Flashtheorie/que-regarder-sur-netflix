@@ -84,6 +84,15 @@
                         
                     </a>
                 </button>
+
+                <button *ngIf="this.voted == 0" class="flex items-center bg-yellow-600  text-white rounded font-semibold px-5 py-4 hover:bg-yellow-600 transition ease-in-out duration-600">
+                  <a href="{{ data[0].link }}" target="_blank">
+                    <i class="fa-solid fa-star-exclamation"></i> Retirer des favoris
+                      
+                  </a>
+              </button>
+
+              
                 <button *ngIf="data[0].type == 'Film'; else ItsASerie" class="flex items-center bg-red-500 text-white rounded font-semibold px-5 py-4 hover:bg-red-600 transition ease-in-out duration-600">
                     <a href="{{ data[0].link }}" target="_blank" >
                         <i class="fa-solid fa-eye"></i> Voir le film sur Netflix
