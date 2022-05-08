@@ -56,6 +56,12 @@ app.get('/connect/:username/:password', function(req, res){
         res.json(data)
     })
 })
+app.get('/api/checkifuserexist/:username/', function(req, res){
+    db.collection('users').findOne({username: req.params.username}, function(err, data){
+        res.json(data)
+    })
+})
+
 app.get('/register/:username/:password', function(req, res){
     db.collection('users').insertOne({
         username: req.params.username,

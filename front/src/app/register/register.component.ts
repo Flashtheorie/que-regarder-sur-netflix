@@ -8,6 +8,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RegisterComponent{
   data: any | undefined = [];
+  error: boolean = false;
+  errorMessage: string;
   saveSession(username:string, password:string){
     sessionStorage.setItem('name', username);
     sessionStorage.setItem('password', password);
@@ -17,13 +19,25 @@ export class RegisterComponent{
   }
   register(username, password){
     
-    this.http.get('http://localhost:3001/register/'+ username + '/'+ password).subscribe(data => {
+    // Check if the user already exists
+    this.http.get('http://localhost:3001/api/checkifuserexist/'+ username).subscribe(data => {
     this.data.push(data);
-    console.log(this.data);
-    
+    if (this.data[0] == null)
+    {
+      this.http.get('http://localhost:3001/register/'+ username+ '/'+ password).subscribe(data => {
       sessionStorage.setItem('name', username);
       sessionStorage.setItem('password', password);
       window.location.href = '/profil/' + username;
+      console.log("Connecté ! ")
+    })
+    }
+    else{
+      this.error = true;
+      this.errorMessage = "Ce compte existe déja";
+      console.log(this.data[0]);
+    }
+    
+      
     
     }, error => console.error(error));
   }

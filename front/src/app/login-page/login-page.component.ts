@@ -7,7 +7,7 @@ import { HttpClient } from '@angular/common/http';
 })
 export class LoginPageComponent implements OnInit {
   data: any | undefined = [];
-  error: any;
+  error: boolean;
   errorMessage: string
   saveSession(username:string, password:string){
     sessionStorage.setItem('name', username);
