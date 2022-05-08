@@ -19,6 +19,14 @@ export class SingleMovieComponent {
   currentRoute: string | undefined;
   data: any | undefined = [];
   router: any;
+
+  checkIfVoted(username, movieid){
+    this.http.get('http://localhost:3001/api/checkIfVoted/' + username + '/' + movieid).subscribe(data => {
+    this.data.push(data);
+    console.log(this.data);
+    }, error => console.error(error));
+  }
+
   constructor(private http: HttpClient, router: Router) {
     //console.log(router.url);
     const url = router.url.split('/');

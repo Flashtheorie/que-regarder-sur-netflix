@@ -75,7 +75,15 @@ app.get('/register/:username/:password', function(req, res){
 })
 
 
-
+// Check if the user has voted for this movie
+app.get('/api/checkIfVoted/:user/:movieid', function(req, res){
+    db.collection('votes').findOne({
+        username: req.params.user,
+        movieid: req.params.movieid
+    }, function(err, data){
+        res.json(data)
+    })
+})
 
 
 
