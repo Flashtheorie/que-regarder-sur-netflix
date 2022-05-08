@@ -22,6 +22,7 @@ export class LoginPageComponent implements OnInit {
     this.data.push(data);
     
     if (this.data != '' && this.data[0].username == username && this.data[0].password == password){
+      this.error = false;
       sessionStorage.setItem('name', username);
       sessionStorage.setItem('password', password);
       //window.location.href = '/profil/' + username;
