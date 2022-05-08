@@ -88,15 +88,15 @@
                 </button>
 
                 <button *ngIf="this.voted == 0"  (click)="RemoveFromFavorites( getSessionInfos(),  data[0]._id)" 
-              (click)="reloadPage()" class="flex items-center bg-yellow-600  text-white rounded font-semibold px-5 py-4 hover:bg-yellow-600 transition ease-in-out duration-600">
+              (click)="reloadPage()" class="flex items-center bg-yellow-600  text-white rounded font-semibold px-5 py-4 hover:bg-yellow-500 transition ease-in-out duration-600">
                   
-                    <i class="fa-solid fa-star-exclamation"></i> Retirer des favoris
+              <i class="fa-duotone fa-trash-can mr-1"></i>  Retirer des favoris
                       
                   
               </button>
 
               
-                <button *ngIf="data[0].type == 'Film'; else ItsASerie" class="flex items-center bg-red-500 text-white rounded font-semibold px-5 py-4 hover:bg-red-600 transition ease-in-out duration-600">
+                <button *ngIf="data[0].type == 'Film'; else ItsASerie" class="flex items-center bg-red-700 text-white rounded font-semibold px-5 py-4 hover:bg-red-600 transition ease-in-out duration-600">
                     <a href="{{ data[0].link }}" target="_blank" >
                         <i class="fa-solid fa-eye"></i> Voir le film sur Netflix
                         
@@ -104,7 +104,7 @@
                     
                 </button>
                 <ng-template #ItsASerie>
-                  <button  class="flex items-center bg-red-500 text-whiter ounded font-semibold px-5 py-4 hover:bg-red-600 transition ease-in-out duration-600">
+                  <button  class="flex items-center bg-red-700 text-white ounded font-semibold px-5 py-4 hover:bg-red-800 transition ease-in-out duration-600">
                     <a href="{{ data[0].link }}" target="_blank" >
                         <i class="fa-solid fa-eye"></i> Voir la série sur Netflix
                         
