@@ -56,7 +56,17 @@ app.get('/connect/:username/:password', function(req, res){
         res.json(data)
     })
 })
-
+app.get('/register/:username/:password', function(req, res){
+    db.collection('users').insertOne({
+        username: req.params.username,
+        password: req.params.password,
+        nbVotes: 0,
+        avatar: `https://ui-avatars.com/api/?name=${req.params.username}`,
+        grade: 'Membre'        
+    }, function(err, data){
+        res.json(data)
+    })
+})
 
 
 
