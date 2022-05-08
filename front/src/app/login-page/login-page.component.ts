@@ -8,6 +8,7 @@ import { HttpClient } from '@angular/common/http';
 export class LoginPageComponent implements OnInit {
   data: any | undefined = [];
   error: any;
+  errorMessage: string
   saveSession(username:string, password:string){
     sessionStorage.setItem('name', username);
     sessionStorage.setItem('password', password);
@@ -30,6 +31,7 @@ export class LoginPageComponent implements OnInit {
     else
     {
       this.error = true;
+      this.errorMessage = "Mot de passe ou nom d'utilisateur incorrect"
     }
     
     }, error => console.error(error));
