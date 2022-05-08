@@ -7,6 +7,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./profil.component.css']
 })
 export class ProfilComponent implements OnInit {
+  hasvoted: any = []
+  voted: number;
+  object: any = []
   saveSession(username:string, password:string){
     sessionStorage.setItem('name', username);
     sessionStorage.setItem('password', password);
@@ -21,6 +24,11 @@ export class ProfilComponent implements OnInit {
     this.http.get('http://localhost:3001/connect/' + sessionStorage.getItem('name') + '/' + sessionStorage.getItem('password')).subscribe(data => {
     this.data.push(data);
     console.log(this.data);
+    this.http.get('http://localhost:3001/api/votes/' + sessionStorage.getItem('name')).subscribe(hasvoted => {
+      this.hasvoted.push(hasvoted);
+      console.log(hasvoted);
+      
+      }, error => console.error(error));
     }, error => console.error(error));
   }
 

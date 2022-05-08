@@ -85,6 +85,15 @@ app.get('/api/checkIfVoted/:user/:movieid', function(req, res){
     })
 })
 
+// fetch all votes
+app.get('/api/votes/:user', function(req, res){
+    db.collection('votes').find({
+        username: req.params.user,
+    }).toArray(function(err, data){
+        res.json(data)
+    })
+})
+
 
 
 
