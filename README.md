@@ -51,3 +51,9 @@ QRSN permet à ses utilisateurs de voter pour leurs films préférés, créant a
 ❌ Création du script d'ajout/modification de données de la base de données
 
 ❌ Update le nombre de votes dans la base de données
+
+❌ Création de la page ou l'utilisateur peut voir tout ses favoris
+
+❌ Mot de passe oublié
+
+❌ Création du script de modification du profil de l'utilisateur
