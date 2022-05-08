@@ -28,12 +28,18 @@ export class NavbarConnectedComponent {
       this.status = !this.status;       
   }  
   data: any | undefined = [];
+  user: any | undefined = [];
   constructor(private http: HttpClient) {
     //console.log(router.url);
 
     this.http.get('http://localhost:3001/connect/' + sessionStorage.getItem('name') + '/' + sessionStorage.getItem('password')).subscribe(data => {
     this.data.push(data);
-    console.log(this.data);
+    //console.log(this.data);
     }, error => console.error(error));
+
+    this.http.get('http://localhost:3001/connect/' + sessionStorage.getItem('name') + '/' + sessionStorage.getItem('password')).subscribe(user => {
+      this.user.push(user);
+      //console.log(this.user);
+      }, error => console.error(error));
   }
 }

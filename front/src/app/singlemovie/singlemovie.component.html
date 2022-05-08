@@ -78,9 +78,10 @@
             </p>
 
             <div class="mt-12 flex flex-row gap-4">
-                <button class="flex items-center bg-yellow-500  text-white rounded font-semibold px-5 py-4 hover:bg-yellow-600 transition ease-in-out duration-600">
+                <button *ngIf="this.voted == 1" class="flex items-center bg-yellow-500  text-white rounded font-semibold px-5 py-4 hover:bg-yellow-600 transition ease-in-out duration-600">
                     <a href="{{ data[0].link }}" target="_blank">
                         <i class="fa-solid fa-star"></i> Ajouter aux favoris
+                        
                     </a>
                 </button>
                 <button *ngIf="data[0].type == 'Film'; else ItsASerie" class="flex items-center bg-red-500 text-white rounded font-semibold px-5 py-4 hover:bg-red-600 transition ease-in-out duration-600">
@@ -91,7 +92,7 @@
                     
                 </button>
                 <ng-template #ItsASerie>
-                  <button  class="flex items-center bg-red-500 text-white rounded font-semibold px-5 py-4 hover:bg-red-600 transition ease-in-out duration-600">
+                  <button  class="flex items-center bg-red-500 text-whiter ounded font-semibold px-5 py-4 hover:bg-red-600 transition ease-in-out duration-600">
                     <a href="{{ data[0].link }}" target="_blank" >
                         <i class="fa-solid fa-eye"></i> Voir la série sur Netflix
                         
