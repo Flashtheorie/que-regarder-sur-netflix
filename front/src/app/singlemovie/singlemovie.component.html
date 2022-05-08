@@ -78,18 +78,21 @@
             </p>
 
             <div class="mt-12 flex flex-row gap-4">
-                <button *ngIf="this.voted == 1" class="flex items-center bg-yellow-500  text-white rounded font-semibold px-5 py-4 hover:bg-yellow-600 transition ease-in-out duration-600">
-                    <a href="{{ data[0].link }}" target="_blank">
+                <button *ngIf="this.voted == 1"  (click)="addToFavorites( getSessionInfos(),  data[0]._id)" 
+              (click)="reloadPage()"
+                class="flex items-center bg-yellow-500  text-white rounded font-semibold px-5 py-4 hover:bg-yellow-600 transition ease-in-out duration-600">
+                    
                         <i class="fa-solid fa-star"></i> Ajouter aux favoris
                         
-                    </a>
+                    
                 </button>
 
-                <button *ngIf="this.voted == 0" class="flex items-center bg-yellow-600  text-white rounded font-semibold px-5 py-4 hover:bg-yellow-600 transition ease-in-out duration-600">
-                  <a href="{{ data[0].link }}" target="_blank">
+                <button *ngIf="this.voted == 0"  (click)="RemoveFromFavorites( getSessionInfos(),  data[0]._id)" 
+              (click)="reloadPage()" class="flex items-center bg-yellow-600  text-white rounded font-semibold px-5 py-4 hover:bg-yellow-600 transition ease-in-out duration-600">
+                  
                     <i class="fa-solid fa-star-exclamation"></i> Retirer des favoris
                       
-                  </a>
+                  
               </button>
 
               

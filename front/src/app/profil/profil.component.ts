@@ -17,6 +17,15 @@ export class ProfilComponent implements OnInit {
   getSessionInfos(){
     return sessionStorage.getItem('name');
   }
+
+
+  
+
+
+
+
+
+
   data: any | undefined = [];
   constructor(private http: HttpClient) {
     //console.log(router.url);

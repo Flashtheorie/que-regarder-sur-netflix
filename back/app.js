@@ -94,8 +94,24 @@ app.get('/api/votes/:user', function(req, res){
     })
 })
 
-
-
+// Add the movie to the favoris
+app.get('/api/votes/:user/:movie', function(req, res){
+    db.collection('votes').insertOne({
+        username: req.params.user,
+        movieid: req.params.movie
+    }, function(err, data){
+        res.json(data)
+    })
+})
+// Remove the movie from the favoris
+app.get('/api/devotes/:user/:movie', function(req, res){
+    db.collection('votes').deleteOne({
+        username: req.params.user,
+        movieid: req.params.movie
+    }, function(err, data){
+        res.json(data)
+    })
+})
 
 
 
