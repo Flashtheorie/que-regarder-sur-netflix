@@ -32,6 +32,7 @@ export class LoginPageComponent implements OnInit {
     {
       this.error = true;
       this.errorMessage = "Mot de passe ou nom d'utilisateur incorrect"
+      //window.location.href = '/login';
     }
     
     }, error => console.error(error));
