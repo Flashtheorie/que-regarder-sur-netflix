@@ -7,6 +7,7 @@ import { HttpClient } from '@angular/common/http';
 })
 export class LoginPageComponent implements OnInit {
   data: any | undefined = [];
+  error: any;
   saveSession(username:string, password:string){
     sessionStorage.setItem('name', username);
     sessionStorage.setItem('password', password);
@@ -14,19 +15,22 @@ export class LoginPageComponent implements OnInit {
   getSessionInfos(){
     return sessionStorage.getItem('name');
   }
+
   connect(username, password){
     
     this.http.get('http://localhost:3001/connect/'+ username + '/'+ password).subscribe(data => {
     this.data.push(data);
-    console.log(this.data);
-    if (this.data != ''){
+    
+    if (this.data != '' && this.data[0].username == username && this.data[0].password == password){
       sessionStorage.setItem('name', username);
       sessionStorage.setItem('password', password);
       //window.location.href = '/profil/' + username;
     }
-    else{
-      console.log('Incorrect username or password')
+    else
+    {
+      this.error = true;
     }
+    
     }, error => console.error(error));
    
   }
