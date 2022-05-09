@@ -33,14 +33,14 @@ reloadPage() {
 addToFavorites(username, movie){
   this.http.get('http://localhost:3001/api/votes/' + username + '/' + movie).subscribe(vote => {
     this.vote.push(vote);
-  console.log('http://localhost:3001/api/votes/' + username + '/' + movie)
+  //console.log('http://localhost:3001/api/votes/' + username + '/' + movie)
 })
 }
 
 RemoveFromFavorites(username, movie){
   this.http.get('http://localhost:3001/api/devotes/' + username + '/' + movie).subscribe(vote => {
     this.vote.push(vote);
-  console.log('http://localhost:3001/api/devotes/' + username + '/' + movie)
+  //console.log('http://localhost:3001/api/devotes/' + username + '/' + movie)
 })
 }
 
@@ -65,7 +65,7 @@ RemoveFromFavorites(username, movie){
     }
     else {
       this.voted = 0;
-      console.error(hasvoted);
+      //console.error(hasvoted);
     }
     
     }, error => console.error(error));

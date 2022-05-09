@@ -18,6 +18,12 @@ export class NavbarComponent{
   toggleDarkMode() {
     document.documentElement.classList.toggle('dark')
     localStorage['theme'] = document.documentElement.classList.contains('dark') ? 'dark' : 'light'
+    if (document.documentElement.classList.contains('dark')){
+      sessionStorage.setItem('theme', 'dark');
+    }
+    else if (document.documentElement.classList.contains('light')){
+    sessionStorage.setItem('theme', 'light');     
+    }
   }
   status: boolean = false;
   clickEvent(){
