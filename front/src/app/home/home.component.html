@@ -1,33 +1,36 @@
 <app-navbar *ngIf="getSessionInfos() == null"></app-navbar>
 <app-navbar-connected *ngIf="getSessionInfos() != null"></app-navbar-connected>
+<section class="relative bg-white">
+  <img
+    class="absolute inset-0 object-[75%] sm:object-[25%] object-cover w-full h-full opacity-25 sm:opacity-100"
+    src="https://images.unsplash.com/photo-1586899028174-e7098604235b"
+    alt="Couple on a bed with a dog"
+  />
 
-<div class="container mx-auto px-4 pt-4 mb-5" align="center">
-  <img src="../assets/boy.PNG" alt="" class="w-full sm:w-1/4">
-<main class=" mx-auto max-w-7xl px-4 mt-0 sm:px-6  lg:px-8 ">
-  
-    <div class="text-center sm:text-center lg:text-center">
-      
-      <h1 class="text-4xl tracking-tight font-extrabold text-gray-900 dark:text-gray-300 sm:text-5xl md:text-6xl">
-        <span class="block xl:inline">Que Regarder Sur </span>
-        <span class="block text-red-800 xl:inline">NETFLIX ?</span>
+  <div class="hidden sm:block sm:inset-0 sm:absolute sm:bg-gradient-to-r sm:from-white sm:to-transparent"></div>
+
+  <div class="relative max-w-screen-xl px-4 py-32 mx-auto lg:h-screen lg:items-center lg:flex">
+    <div class="max-w-xl text-center sm:text-left">
+      <h1 class="text-3xl font-extrabold sm:text-5xl">
+        Que Regarder Sur
+        <strong class="font-extrabold text-rose-700 sm:block">
+          Netflix ?
+        </strong>
       </h1>
-      
-      <p class="text-center mt-3 text-base text-gray-500 sm:mt-5 sm:text-lg w-full  md:mt-5 md:text-xl lg:mx-0">
-          Un outil pour vous aider à choisir quoi regarder sur Netflix.</p>
 
-          <p class="text-center italic mt-3 text-base text-gray-500 sm:mt-5 sm:text-lg w-full  md:mt-5 md:text-xl lg:mx-0">
-            Pour les spectateurs, par les spectateurs
-            
-          </p>
-      <div class="mt-5 sm:mt-8 sm:flex sm:justify-center lg:justify-center">
-        <div class="rounded-md shadow">
-          <a routerLink="/top/movies/all" class="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-red-800 hover:bg-red-900 md:py-4 md:text-lg md:px-10"> Trouver les meilleurs films </a>
-        </div>
-        
+      <p class="max-w-lg mt-4 sm:leading-relaxed sm:text-xl">
+        Un outil pour vous aider à choisir quoi regarder sur Netflix.
+      </p>
+
+      <div class="flex flex-wrap gap-4 mt-8 text-center">
+        <a class="block w-full px-12 py-3 text-sm font-medium text-white rounded shadow bg-rose-600 sm:w-auto active:bg-rose-500 hover:bg-rose-700 focus:outline-none focus:ring" href="/get-started">
+          Je m'inscris
+        </a>
+
+        <a class="block w-full px-12 py-3 text-sm font-medium bg-white rounded shadow text-rose-600 sm:w-auto hover:text-rose-700 active:text-rose-500 focus:outline-none focus:ring" href="/about">
+          J'ai déja un compte
+        </a>
       </div>
     </div>
-  </main>
-
-
-
-</div>
+  </div>
+</section>

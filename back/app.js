@@ -100,7 +100,12 @@ app.get('/api/votes/:user/:movie', function(req, res){
         username: req.params.user,
         movieid: req.params.movie
     }, function(err, data){
-        res.json(data)
+        //res.json(req.params.user)
+        if (err) throw err;
+        db.collection('movies').updateOne( { username: req.params.user},
+            { $inc: { nbVotes: 1 } }, function(){
+                //console.log(req.params.user)
+            } )
     })
 })
 // Remove the movie from the favoris
@@ -109,7 +114,10 @@ app.get('/api/devotes/:user/:movie', function(req, res){
         username: req.params.user,
         movieid: req.params.movie
     }, function(err, data){
-        res.json(data)
+        if (err) throw err
+        //res.json(data)
+        db.collection('movies').updateOne( { username: req.params.user, movieid: req.params.movie },
+            { $inc: { nbVotes: -1 } } )
     })
 })
 

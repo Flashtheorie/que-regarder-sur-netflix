@@ -65,7 +65,7 @@
         
         <img src="{{ data[0].avatar }}" class="w-64 md:w-96 rounded-lg" style="width: 24rem;">
         <div class="md:ml-24">
-            <h2 class="text-4xl font-semibold dark:text-gray-400">{{ data[0].title }} ({{ data[0].datedesortie }})</h2>
+            <h2 class="text-4xl font-semibold dark:text-gray-400">{{ data.results.original_title }} ({{ data[0].datedesortie }})</h2>
             <div class="flex flex-wrap items-center text-red-400">
                 <span class="ml-1 text-yellow-900 dark:text-yellow-500 text-sm"><i class="fa-solid fa-star "></i> {{ data[0].nbVotes }}</span>
                 <span class="mx-2">|</span>
