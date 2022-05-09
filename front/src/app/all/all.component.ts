@@ -18,7 +18,9 @@ export class AllComponent {
   constructor(private http: HttpClient) {
     this.http.get('http://localhost:3001/api/films').subscribe(data => {
     this.data.push(data);
-    console.log(this.data);
-    }, error => console.error(error));
+    if (this.data != undefined) {
+      //console.log(this.data);
+    }
+    });
   }
 }

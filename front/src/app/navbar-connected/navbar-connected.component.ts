@@ -35,11 +35,11 @@ export class NavbarConnectedComponent {
     this.http.get('http://localhost:3001/connect/' + sessionStorage.getItem('name') + '/' + sessionStorage.getItem('password')).subscribe(data => {
     this.data.push(data);
     //console.log(this.data);
-    }, error => console.error(error));
+    });
 
     this.http.get('http://localhost:3001/connect/' + sessionStorage.getItem('name') + '/' + sessionStorage.getItem('password')).subscribe(user => {
       this.user.push(user);
       //console.log(this.user);
-      }, error => console.error(error));
+      });
   }
 }

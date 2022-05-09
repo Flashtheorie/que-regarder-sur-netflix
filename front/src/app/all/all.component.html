@@ -51,7 +51,7 @@
         <div class="mt-2">
             <span class="text-lg mt-2 font-bold dark:text-gray-400">{{ movie.title }}</span>
             <div class="flex items-center text-red-400">
-              <span class="ml-1 text-yellow-900 dark:text-yellow-500 text-sm"><i class="fa-solid fa-star"></i> {{ movie.nbVotes }}</span>
+              <span class="ml-1 text-yellow-600 dark:text-yellow-500 text-sm"><i class="fa-solid fa-star"></i> {{ movie.nbVotes }}</span>
                 <span class="mx-2">|</span>
                 <span>{{ movie.datedesortie }}</span>
             </div>
@@ -63,6 +63,31 @@
     
 </div>
 </div>
+
+
+
+
+
+<nav class="mt-5 bg-red-100 dark:bg-slate-600 px-4 py-3 flex items-center justify-between  sm:px-6" aria-label="Pagination">
+  <div class="hidden sm:block">
+    <p class="text-sm text-gray-700 dark:text-gray-300">
+      Affichage de 
+      <span class="font-medium dark:text-gray-300">{{ data[0].length }}</span>
+      films sur un total de 
+      <span class="font-medium dark:text-gray-300">{{ data[0].length }}</span>
+      résultats
+    </p>
+  </div>
+  <div class="flex-1 flex justify-between sm:justify-end">
+    <a href="#" class="relative inline-flex items-center px-4 py-2 border border-gray-300 text-sm font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50"> Précédent </a>
+    <a href="#" class="ml-3 relative inline-flex items-center px-4 py-2 border border-gray-300 text-sm font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50"> Suivant </a>
+  </div>
+</nav>
+
+
+
+
+
 
 
 <!-- If not logged in -->

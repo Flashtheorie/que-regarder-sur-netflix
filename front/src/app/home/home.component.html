@@ -23,12 +23,16 @@
       </p>
 
       <div class="flex flex-wrap gap-4 mt-8 text-center">
-        <a class="block w-full px-12 py-3 text-sm font-medium text-white rounded shadow bg-rose-600 sm:w-auto active:bg-rose-500 hover:bg-rose-700 focus:outline-none focus:ring" href="/get-started">
+        <a *ngIf="getSessionInfos() == null" class="block w-full px-12 py-3 text-sm font-medium text-white rounded shadow bg-rose-600 sm:w-auto active:bg-rose-500 hover:bg-rose-700 focus:outline-none focus:ring" routerLink="/register">
           Je m'inscris
         </a>
 
-        <a class="block w-full px-12 py-3 text-sm font-medium bg-white rounded shadow text-rose-600 sm:w-auto hover:text-rose-700 active:text-rose-500 focus:outline-none focus:ring" href="/about">
+        <a *ngIf="getSessionInfos() == null" class="block w-full px-12 py-3 text-sm font-medium bg-white rounded shadow text-rose-600 sm:w-auto hover:text-rose-700 active:text-rose-500 focus:outline-none focus:ring" routerLink="/login">
           J'ai déja un compte
+        </a>
+
+        <a *ngIf="getSessionInfos() != null" class="block w-full px-12 py-3 text-sm font-medium text-white rounded shadow bg-rose-600 sm:w-auto active:bg-rose-500 hover:bg-rose-700 focus:outline-none focus:ring" routerLink="/top/movies/all">
+          Voir les meilleurs films
         </a>
       </div>
     </div>
